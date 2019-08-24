@@ -2,7 +2,6 @@ src/_build
 src/deps
 src/*.ez
 src/erl_crash.dump
-src/profiles/*
 
 .env
 .DS_Store
