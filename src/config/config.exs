@@ -29,6 +29,12 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+
+# Config for email sevice
+ config :kolombia, Kolombia.Mailer,
+    adapter: Bamboo.SendGridAdapter,
+    api_key: "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"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
