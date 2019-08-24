@@ -20,7 +20,7 @@ defmodule Kolombia.MixProject do
   def application do
     [
       mod: {Kolombia.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :bamboo]
     ]
   end
 
@@ -37,7 +37,9 @@ defmodule Kolombia.MixProject do
       {:phoenix_pubsub,     "~> 1.1"},
       {:gettext,            "~> 0.11"},
       {:jason,              "~> 1.0"},
-      {:plug_cowboy,        "~> 2.0"}
+      {:plug_cowboy,        "~> 2.0"},
+      {:bamboo,             "~> 1.3"},
+      {:bamboo_smtp,        "~> 1.7.0"}
     ]
   end
 
