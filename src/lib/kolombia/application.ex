@@ -8,8 +8,6 @@ defmodule Kolombia.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      Kolombia.Repo,
       # Start the endpoint when the application starts
       KolombiaWeb.Endpoint
       # Starts a worker by calling: Kolombia.Worker.start_link(arg)
