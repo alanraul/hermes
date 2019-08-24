@@ -14,11 +14,6 @@ apt-get install cmake
 ```
 
 
-```
-git clone git@github.com:tu_usuario/la-tasa-panel.git
-
-```
-
 - Si tienes problemas para clonar el repositorio via ssh, sigue la guia para [Crear tu ssh key](https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 - Ejecuta el script para instalar el ambiente y las dependencias necesarias.
