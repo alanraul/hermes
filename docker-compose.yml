@@ -3,7 +3,7 @@ services:
   phx:
     image: resuelve/phoenix:elixir-1.6.6
     ports:
-      - "${PHX_HOST_PORT:-9000}:${PHX_PORT:-4000}"
+      - "${PHX_HOST_PORT:-4000}:${PHX_PORT:-4000}"
     volumes:
       - ./src:/app/src
       - ./src/_build/prod/rel:/app/src/_build/prod/rel

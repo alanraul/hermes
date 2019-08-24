@@ -1,28 +1,15 @@
 # Kolombia
 
-
-- Instalar Cmake en MacOS
+### Setup
 
 ```shell
-brew install cmake
+make bootstrap
 ```
 
-- Instalar Cmake en Linux
+### Levantar servicio
+
+- Prueba la instalación ejecutando el entorno y entrando a **http://localhost:4000**. Puedes salir con **<kbd>Ctrl</kbd> + <kbd>c</kbd>**.
 
 ```shell
-sudo apt install cmake
-```
-
-- Si tienes problemas para clonar el repositorio via ssh, sigue la guia para [Crear tu ssh key](https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-
-- Ejecuta el script para instalar el ambiente y las dependencias necesarias.
-
-```shell
-make bootstrap ecto.setup npm.install
-```
-
-- Prueba la instalación ejecutando el entorno y entrando a **http://localhost**. Puedes salir con **<kbd>Ctrl</kbd> + <kbd>c</kbd>**.
-
-```shell
-make start
+make start logs
 ```
