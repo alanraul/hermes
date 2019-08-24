@@ -7,9 +7,6 @@
 # General application configuration
 use Mix.Config
 
-config :kolombia,
-  ecto_repos: [Kolombia.Repo]
-
 # Configures the endpoint
 config :kolombia, KolombiaWeb.Endpoint,
   render_errors: [

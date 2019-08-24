@@ -6,22 +6,6 @@ config :kolombia, Kolombia.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
-# For development, we disable any cache and enable
-# debugging and code reloading.
-#
-# The watchers configuration can be used to run external
-# watchers to your application. For example, we use it
-# with webpack to recompile .js and .css sources.
-config :kolombia, KolombiaWeb.Endpoint,
-  http: [port: System.get_env("PHX_PORT")],
-  url: [host: System.get_env("PHX_URL")],
-  secret_key_base: System.get_env("PHX_SECRET_KEY_BASE"),
-  http: [port: 4000],
-  debug_errors: true,
-  code_reloader: true,
-  check_origin: false,
-  watchers: []
-
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed
