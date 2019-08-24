@@ -10,9 +10,8 @@ brew install cmake
 - Instalar Cmake en Linux
 
 ```shell
-apt-get install cmake
+sudo apt install cmake
 ```
-
 
 - Si tienes problemas para clonar el repositorio via ssh, sigue la guia para [Crear tu ssh key](https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
