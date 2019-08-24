@@ -5,7 +5,7 @@ defmodule Kolombia.Emails.FirstEmail do
 
   def first_email do
      new_email()
-    |> from("kolombia@gshck.com") 
+    |> from("kolombia@gshck.com")
     |> to("llenriquelopez@gmail.com")
     |> subject("Welcome!!!")
     |> put_header("No-Reply-To", "no-reply@example.com")
