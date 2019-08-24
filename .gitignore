@@ -1,0 +1,9 @@
+src/_build
+src/deps
+src/*.ez
+src/erl_crash.dump
+
+.env
+.DS_Store
+.DS_Store?
+.Trashes
