@@ -63,11 +63,3 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
-
-
-# Configure your database
-config :kolombia, Kolombia.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: "${PG_RESUELVE_BOT_URL}",
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
