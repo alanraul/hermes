@@ -9,8 +9,6 @@ services:
       - ./src/_build/prod/rel:/app/src/_build/prod/rel
       - phx.deps:/app/src/deps
       - phx.builds:/app/src/_build
-    depends_on:
-      - postgres
     environment:
       - MIX_ENV=${ENV:-dev}
       - PHX_PORT=${PHX_PORT:-4000}
