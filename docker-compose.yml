@@ -17,11 +17,9 @@ services:
       - PHX_URL=${PHX_HOST:-localhost}
       - PHX_SECRET_KEY_BASE=${PHX_SECRET_KEY_BASE}
       - PG_KOLOMBIA_URL=ecto://postgres:postgres@postgres/kolombia_${ENV:-dev}
+      - SENDGRID_APIKEY=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
     working_dir: /app/src
     command: mix phx.server
-
-  postgres:
-    image: postgres:9.6.4
 
 volumes:
   phx.deps:
