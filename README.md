@@ -98,5 +98,5 @@ make start logs
 }
 ```
 donde te indica los errores y cuales notificaciones fueron enviadas de manera exitosa
-
+  
 ### Revisa tus  SMSs y tu correo (tal vez este en spam por ser una prueba)
