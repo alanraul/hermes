@@ -1,4 +1,4 @@
-defmodule Kolombia.DataCase do
+defmodule Hermes.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,12 +16,12 @@ defmodule Kolombia.DataCase do
 
   using do
     quote do
-      alias Kolombia.Repo
+      alias Hermes.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Kolombia.DataCase
+      import Hermes.DataCase
     end
   end
 

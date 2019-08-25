@@ -5,7 +5,7 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     Kolombia.Repo.insert!(%Kolombia.SomeSchema{})
+#     Hermes.Repo.insert!(%Hermes.SomeSchema{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.

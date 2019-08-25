@@ -8,13 +8,13 @@
 use Mix.Config
 
 # Configures the endpoint
-config :kolombia, KolombiaWeb.Endpoint,
+config :hermes, HermesWeb.Endpoint,
   render_errors: [
-    view: KolombiaWeb.ErrorView,
+    view: HermesWeb.ErrorView,
     accepts: ~w(json)
   ],
   pubsub: [
-    name: Kolombia.PubSub,
+    name: Hermes.PubSub,
     adapter: Phoenix.PubSub.PG2
   ]
 
@@ -28,7 +28,7 @@ config :phoenix, :json_library, Jason
 
 
 # Config for email sevice
- config :kolombia, Kolombia.Mailer,
+ config :hermes, Hermes.Mailer,
     adapter: Bamboo.SendGridAdapter,
     api_key: System.get_env("SENDGRID_APIKEY")
 
@@ -36,7 +36,7 @@ config :ex_twilio,
   account_sid: System.get_env("TWILIO_ACCOUNT_SID"),
   auth_token: System.get_env("TWILIO_AUTH_TOKEN")
 
-config :kolombia,
+config :hermes,
     sendgrid_transaction_id: System.get_env("SENDGRID_TRASNACTION_ID")
 
 # Import environment specific config. This must remain at the bottom

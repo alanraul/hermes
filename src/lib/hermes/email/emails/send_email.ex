@@ -1,7 +1,7 @@
-defmodule Kolombia.EmailSender do
+defmodule Hermes.EmailSender do
 
-  alias Kolombia.Mailer
-  alias Kolombia.Emails.FirstEmail
+  alias Hermes.Mailer
+  alias Hermes.Emails.FirstEmail
 
 
   @doc """

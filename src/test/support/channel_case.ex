@@ -1,4 +1,4 @@
-defmodule KolombiaWeb.ChannelCase do
+defmodule HermesWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,7 +21,7 @@ defmodule KolombiaWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint KolombiaWeb.Endpoint
+      @endpoint HermesWeb.Endpoint
     end
   end
 

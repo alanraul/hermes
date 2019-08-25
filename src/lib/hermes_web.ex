@@ -1,12 +1,12 @@
-defmodule KolombiaWeb do
+defmodule HermesWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use KolombiaWeb, :controller
-      use KolombiaWeb, :view
+      use HermesWeb, :controller
+      use HermesWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule KolombiaWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: KolombiaWeb
+      use Phoenix.Controller, namespace: HermesWeb
 
       import Plug.Conn
-      import KolombiaWeb.Gettext
-      alias KolombiaWeb.Router.Helpers, as: Routes
+      import HermesWeb.Gettext
+      alias HermesWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,14 +31,14 @@ defmodule KolombiaWeb do
     quote do
       use Phoenix.View,
         root: "lib/kolombia_web/templates",
-        namespace: KolombiaWeb
+        namespace: HermesWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-      import KolombiaWeb.ErrorHelpers
-      import KolombiaWeb.Gettext
-      alias KolombiaWeb.Router.Helpers, as: Routes
+      import HermesWeb.ErrorHelpers
+      import HermesWeb.Gettext
+      alias HermesWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -53,7 +53,7 @@ defmodule KolombiaWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import KolombiaWeb.Gettext
+      import HermesWeb.Gettext
     end
   end
 

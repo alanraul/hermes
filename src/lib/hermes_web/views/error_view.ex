@@ -1,5 +1,5 @@
-defmodule KolombiaWeb.ErrorView do
-  use KolombiaWeb, :view
+defmodule HermesWeb.ErrorView do
+  use HermesWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.
