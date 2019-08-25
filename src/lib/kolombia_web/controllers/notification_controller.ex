@@ -36,13 +36,15 @@ defmodule KolombiaWeb.NotificationController do
         {:error, Poison.decode!(error)}
     end
   end
+
   def notify("sms", transaction) do
     case SendSMS.create_message(transaction["to_message"], transaction["from_message"], transaction["amount"]) do
-      {:ok, sms} -> sms
+      {:ok, sms} -> {:ok, :sms}
       {:error, message} ->
         {:error, message}
     end
   end
+
   def notify(method, transaction) do
     {:error, %{
       method: method,
