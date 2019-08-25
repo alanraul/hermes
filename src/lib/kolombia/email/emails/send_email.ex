@@ -10,5 +10,6 @@ defmodule Kolombia.EmailSender do
   @spec send_first_email(String.t(), map) :: Email
   def send_first_email(destiny, params) do
     FirstEmail.deposit_email(destiny, params)
+    |> Mailer.deliver_later()
   end
 end

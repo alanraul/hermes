@@ -37,7 +37,7 @@ defmodule KolombiaWeb.NotificationController do
     end
   end
   def notify("sms", transaction) do
-    case SendSMS.create_message do
+    case SendSMS.create_message(transaction["to_message"], transaction["from_message"], transaction["amount"]) do
       {:ok, sms} -> sms
       {:error, message} ->
         {:error, message}
