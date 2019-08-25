@@ -35,6 +35,10 @@ defmodule KolombiaWeb.NotificationController do
     end
   end
 
+  @doc """
+  Construye y llama a la funcion que envia las notificaciones
+  """
+  @spec _build_notifications(list, map) :: map()
   defp _build_notifications(methods, transaction) do
       methods
       |> Enum.reduce(@response, fn m, acc ->
@@ -47,10 +51,18 @@ defmodule KolombiaWeb.NotificationController do
       end)
   end
 
+  @doc """
+  Valida que la transacción tenga todos los campos necesarios
+  """
+  @spec _check_transaction_fields(map) :: boolean
   defp _check_transaction_fields(transaction) do
     Enum.all?(@transaction_fields, &(Map.has_key?(transaction, &1)))
   end
 
+  @doc """
+  Envia la notificacion segun sea el caso [:email, :sms]
+  """
+  @spec notify(String.t(), map) :: tuple
   def notify("email", transaction) do
     case EmailSender.send_first_email(transaction["destiny"], transaction) do
       %Bamboo.Email{} ->
@@ -62,13 +74,13 @@ defmodule KolombiaWeb.NotificationController do
 
   def notify("sms", transaction) do
     case SendSMS.create_message(transaction["to_message"], transaction["from_message"], transaction["amount"]) do
-      {:ok, sms} -> {:ok, :sms}
+      {:ok, _sms} -> {:ok, :sms}
       {:error, message} ->
         {:error, message}
     end
   end
 
-  def notify(method, transaction) do
+  def notify(method, _transaction) do
     {:error, %{
       method: method,
       message: "Método inválido",

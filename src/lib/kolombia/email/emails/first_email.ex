@@ -6,7 +6,7 @@ defmodule Kolombia.Emails.FirstEmail do
   @doc """
   Construye un email y lo envia usando un template de sendgrid
   """
-  @spec deposit_email(String.t(), map) :: Email
+  @spec deposit_email(String.t(), map) :: Email.t()
   def deposit_email(destiny, params) do
     new_email()
     |> to(destiny)
