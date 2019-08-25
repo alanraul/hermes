@@ -6,6 +6,8 @@ Actualmente desarrollamos el envio de mensajes de texto SMS y el envío de corre
 
 Para el desarrollo del envio de SMS Hermes se conecta al servicio de Twilio y para el envio de correos electrónicos se conecta al servico de Sendgrid del cual toma un template donde se muestra la información de la transacción.
 
+Quisimos desarrollar el envio de mesajes por WhatsApp y Facebook, pero teniamos que esperar una respuesta para WhatsApp Business :(
+
 ### Setup
 
 #### Instalar Docker en Mac
