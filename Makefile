@@ -4,7 +4,6 @@
 
 bootstrap:
 	docker-compose run --rm -T --no-deps phx sh -c "mix deps.get && mix deps.compile"
-	make ecto.setup
 
 reset:
 	docker-compose run --rm --no-deps phx sh -c "rm -rf /app/src/deps/* /app/src/_build/dev/*"

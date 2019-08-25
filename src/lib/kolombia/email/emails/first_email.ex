@@ -4,12 +4,14 @@ defmodule Kolombia.Emails.FirstEmail do
   import Bamboo.SendGridHelper
 
   def first_email do
-     new_email()
-    |> from("kolombia@gshck.com") 
-    |> to("llenriquelopez@gmail.com")
-    |> subject("Welcome!!!")
-    |> put_header("No-Reply-To", "no-reply@example.com")
-    |> html_body("<strong>Welcome</strong>")
-    |> text_body("Welcome")
+    new_email()
+    |>to("llenriquelopez@gmail.com")
+    |> from("gshck@salinas.com")
+    |> add_dynamic_field(:amount, 800)
+    |> add_dynamic_field(:account, 123456743564)
+    |> add_dynamic_field(:date, Date.utc_today)
+    |> add_dynamic_field(:reference, 98765433)
+    |> add_dynamic_field(:name, "Gabriel Garcia Marquez")
+    |> with_template(Application.get_env(:kolombia, :sendgrid_transaction_id))
   end
 end
