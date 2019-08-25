@@ -1,4 +1,4 @@
-defmodule Kolombia.SendSMS do
+defmodule Hermes.SendSMS do
   alias ExTwilio.Api
   alias ExTwilio.Message
 

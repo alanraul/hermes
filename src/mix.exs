@@ -1,9 +1,9 @@
-defmodule Kolombia.MixProject do
+defmodule Hermes.MixProject do
   use Mix.Project
 
   def project do
     [
-      app:                  :kolombia,
+      app:                  :hermes,
       version:              "0.1.0",
       elixir:               "~> 1.5",
       elixirc_paths:        elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Kolombia.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Kolombia.Application, []},
+      mod: {Hermes.Application, []},
       extra_applications: [:logger, :runtime_tools, :bamboo, :ex_twilio]
     ]
   end

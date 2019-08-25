@@ -1,4 +1,4 @@
-defmodule Kolombia.Emails.FirstEmail do
+defmodule Hermes.Emails.FirstEmail do
 
   import Bamboo.Email
   import Bamboo.SendGridHelper
@@ -16,6 +16,6 @@ defmodule Kolombia.Emails.FirstEmail do
     |> add_dynamic_field(:date, Date.utc_today)
     |> add_dynamic_field(:reference, params["reference"])
     |> add_dynamic_field(:name, params["name"])
-    |> with_template(Application.get_env(:kolombia, :sendgrid_transaction_id))
+    |> with_template(Application.get_env(:hermes, :sendgrid_transaction_id))
   end
 end

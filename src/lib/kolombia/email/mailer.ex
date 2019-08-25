@@ -1,3 +1,3 @@
-defmodule Kolombia.Mailer do
-  use Bamboo.Mailer, otp_app: :kolombia
+defmodule Hermes.Mailer do
+  use Bamboo.Mailer, otp_app: :hermes
 end

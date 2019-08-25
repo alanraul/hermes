@@ -1,8 +1,8 @@
-defmodule KolombiaWeb.NotificationController do
-  use KolombiaWeb, :controller
+defmodule HermesWeb.NotificationController do
+  use HermesWeb, :controller
 
-  alias Kolombia.EmailSender
-  alias Kolombia.SendSMS
+  alias Hermes.EmailSender
+  alias Hermes.SendSMS
 
   @response %{
     success: [],
