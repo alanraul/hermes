@@ -24,20 +24,18 @@ defmodule KolombiaWeb.NotificationController do
   def notification(conn, %{"notification" => notification_params}) do
     notification_params["methods"]
     |> Enum.map(fn m -> notify(m, notification_params["transaction"]) end)
-    |> IO.inspect
   end
 
   def notify("email", transaction) do
-    IO.inspect transaction
     case EmailSender.send_first_email(transaction["destiny"], transaction) do
       %Bamboo.Email{} ->
         {:ok, :email}
       error ->
-        {:error, "error"}
+        {:error, Poison.decode!(error)}
     end
   end
   
-  def notify(method,transaction) do
+  def notify(method, transaction) do
     %{
       method: method,
       message: "Método inválido",
@@ -45,3 +43,4 @@ defmodule KolombiaWeb.NotificationController do
   end
 
 end
+
