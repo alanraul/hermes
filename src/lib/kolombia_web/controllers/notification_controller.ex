@@ -31,7 +31,6 @@ defmodule KolombiaWeb.NotificationController do
       true <- _check_transaction_fields(notification_params["transaction"]),
       response <- _build_notifications(notification_params["methods"], notification_params["transaction"]) 
     do
-      IO.inspect response
       render(conn, "response.json", response: response)
     end
   end
