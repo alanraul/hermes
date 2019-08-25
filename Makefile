@@ -51,24 +51,6 @@ shell.test:
 deps.update:
 	docker-compose run --rm phx sh -c "mix deps.clean --unused && mix deps.get && mix deps.compile"
 
-ecto.reset:
-	docker-compose run --rm phx sh -c "mix ecto.reset"
-
-ecto.rollback:
-	docker-compose run --rm phx sh -c "mix ecto.rollback"
-
-ecto.migrate:
-	docker-compose run --rm phx sh -c "mix ecto.migrate"
-
-ecto.seeds:
-	docker-compose run --rm --no-deps phx sh -c "mix run priv/repo/seeds.exs"
-
-ecto.setup:
-	docker-compose run --rm phx sh -c "mix ecto.setup"
-
-ecto.gen.migration:
-	docker-compose run --rm phx sh -c "mix ecto.gen.migration ${file}"
-
 routes:
 	docker-compose run --rm  phx sh -c "mix phx.routes"
 
