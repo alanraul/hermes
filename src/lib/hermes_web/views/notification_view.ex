@@ -1,7 +1,7 @@
-defmodule KolombiaWeb.NotificationView do
-  use KolombiaWeb, :view
+defmodule HermesWeb.NotificationView do
+  use HermesWeb, :view
 
-  alias KolombiaWeb.NotificationView
+  alias HermesWeb.NotificationView
 
   def render("response.json", %{response: response}) do
     %{

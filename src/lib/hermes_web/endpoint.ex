@@ -1,7 +1,7 @@
-defmodule KolombiaWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :kolombia
+defmodule HermesWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :hermes
 
-  socket "/socket", KolombiaWeb.UserSocket,
+  socket "/socket", HermesWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -11,7 +11,7 @@ defmodule KolombiaWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :kolombia,
+    from: :hermes,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -40,5 +40,5 @@ defmodule KolombiaWeb.Endpoint do
     key: "_kolombia_key",
     signing_salt: "x/aIza57"
 
-  plug KolombiaWeb.Router
+  plug HermesWeb.Router
 end

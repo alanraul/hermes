@@ -1,6 +1,6 @@
-defmodule Kolombia do
+defmodule Hermes do
   @moduledoc """
-  Kolombia keeps the contexts that define your domain
+  Hermes keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless
