@@ -18,7 +18,7 @@ services:
       - SENDGRID_APIKEY=${SENDGRID_APIKEY}
       - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
       - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
-
+      - SENDGRID_TRASNACTION_ID=${SENDGRID_TRASNACTION_ID}
     working_dir: /app/src
     command: mix phx.server
 
