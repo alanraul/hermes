@@ -81,6 +81,8 @@ make start logs
 	}
 }
 ```
+### Los ```methods``` son las formas en las que quieres que hermes te envie las notificaciones
+
 ### Hermes te regresara una estructura similar a esto: 
 
 ```shell
@@ -97,6 +99,5 @@ make start logs
 ```
 donde te indica los errores y cuales notificaciones fueron enviadas de manera exitosa
 
-## Los ```methods``` son las formas en las que quieres que hermes te envie las notificaciones
 
 ### Revisa tus  SMSs y tu correo (tal vez este en spam por ser una prueba)
