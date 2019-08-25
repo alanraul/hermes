@@ -81,6 +81,21 @@ make start logs
 	}
 }
 ```
+### Hermes te regresara una estructura similar a esto: 
+
+```shell
+{
+    "data": {
+        "errors": [],
+        "success": [
+            "email",
+            "sms"
+        ]
+    },
+    "status": "success"
+}
+```
+donde te indica los errores y cuales notificaciones fueron enviadas de manera exitosa
 
 ### Los ```methods``` son las formas en las que quieres que hermes te envie las notificaciones
 
