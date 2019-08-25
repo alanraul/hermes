@@ -32,6 +32,11 @@ config :phoenix, :json_library, Jason
     adapter: Bamboo.SendGridAdapter,
     api_key: System.get_env("SENDGRID_APIKEY")
 
+  
+config :ex_twilio,
+  account_sid: System.get_env("TWILIO_ACCOUNT_SID"),
+  auth_token: System.get_env("TWILIO_AUTH_TOKEN")
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

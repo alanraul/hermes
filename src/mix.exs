@@ -19,6 +19,7 @@ defmodule Kolombia.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
+      applications: [:ex_twilio],
       mod: {Kolombia.Application, []},
       extra_applications: [:logger, :runtime_tools, :bamboo]
     ]
@@ -39,7 +40,8 @@ defmodule Kolombia.MixProject do
       {:jason,              "~> 1.0"},
       {:plug_cowboy,        "~> 2.0"},
       {:bamboo,             "~> 1.3"},
-      {:bamboo_smtp,        "~> 1.7.0"}
+      {:bamboo_smtp,        "~> 1.7.0"},
+      {:ex_twilio, "~> 0.7.0"}
     ]
   end
 
