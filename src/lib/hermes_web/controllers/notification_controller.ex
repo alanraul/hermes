@@ -16,8 +16,6 @@ defmodule HermesWeb.NotificationController do
     "reference",
     "name",
     "destiny",
-    "from_message",
-    "to_message",
     "amount"
   ]
 
