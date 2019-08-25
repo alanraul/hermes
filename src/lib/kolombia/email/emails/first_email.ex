@@ -5,7 +5,7 @@ defmodule Kolombia.Emails.FirstEmail do
 
   def deposit_email(destiny, params) do
     new_email()
-    |>to(destiny)
+    |> to(destiny)
     |> from("banco@azteca.com")
     |> add_dynamic_field(:amount, params.amount)
     |> add_dynamic_field(:account, params.account)
