@@ -5,7 +5,9 @@ defmodule KolombiaWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", KolombiaWeb do
+  scope "/api/v1", KolombiaWeb do
     pipe_through :api
+
+    post "/notification", NotificationController, :notification
   end
 end
