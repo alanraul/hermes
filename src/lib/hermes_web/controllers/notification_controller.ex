@@ -16,7 +16,9 @@ defmodule HermesWeb.NotificationController do
     "reference",
     "name",
     "destiny",
-    "amount"
+    "amount",
+    "to_message",
+    "from_message"
   ]
 
 
@@ -71,7 +73,7 @@ defmodule HermesWeb.NotificationController do
   end
 
   def notify("sms", transaction) do
-    case SendSMS.create_message(transaction["to_message"], transaction["from_message"], transaction["amount"]) do
+    case SendSMS.create_message(transaction) do
       {:ok, _sms} -> {:ok, :sms}
       {:error, message} ->
         {:error, message}
