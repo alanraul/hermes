@@ -32,6 +32,10 @@ config :phoenix, :json_library, Jason
     adapter: Bamboo.SendGridAdapter,
     api_key: System.get_env("SENDGRID_APIKEY")
 
+config :ex_twilio,
+  account_sid: System.get_env("TWILIO_ACCOUNT_SID"),
+  auth_token: System.get_env("TWILIO_AUTH_TOKEN")
+
 config :kolombia,
     sendgrid_transaction_id: System.get_env("SENDGRID_TRASNACTION_ID")
 
