@@ -9,23 +9,46 @@ defmodule KolombiaWeb.NotificationController do
     errors: []
   }
 
+
+  @transaction_fields [
+    "account",
+    "date",
+    "reference",
+    "name",
+    "destiny",
+    "from_message",
+    "to_message",
+    "amount"
+  ]
+
+
   @doc """
   Recibe transacciones y envia notificationes a servicios.
   """
   @spec notification(map, map) :: tuple
   def notification(conn, %{"notification" => notification_params}) do
-    response =
-      notification_params["methods"]
+   with \
+      true <- _check_transaction_fields(notification_params["transaction"]),
+      response <- _build_notifications(notification_params["methods"], notification_params["transaction"]) 
+    do
+      render(conn, "response.json", response: response)
+    end
+  end
+
+  defp _build_notifications(methods, transaction) do
+      methods
       |> Enum.reduce(@response, fn m, acc ->
-        case notify(m, notification_params["transaction"]) do
+        case notify(m, transaction) do
           {:ok, method} ->
             Map.put(acc, :success, acc.success ++ [method])
           {:error, error} ->
             Map.put(acc, :errors, acc.errors ++ [error])
         end
       end)
+  end
 
-    render(conn, "response.json", response: response)
+  defp _check_transaction_fields(transaction) do
+    Enum.all?(@transaction_fields, &(Map.has_key?(transaction, &1)))
   end
 
   def notify("email", transaction) do
@@ -51,5 +74,4 @@ defmodule KolombiaWeb.NotificationController do
       message: "Método inválido",
     }}
   end
-
 end
