@@ -2,6 +2,7 @@ defmodule KolombiaWeb.NotificationController do
   use KolombiaWeb, :controller
 
   alias Kolombia.EmailSender
+  alias Kolombia.SendSMS
 
   @doc """
   Recibe transacciones y envia notificationes a servicios.
@@ -32,6 +33,14 @@ defmodule KolombiaWeb.NotificationController do
         {:ok, :email}
       error ->
         {:error, Poison.decode!(error)}
+    end
+  end
+
+  def notify("sms", transaction) do
+    case SendSMS.create_message do
+      {:ok, sms} -> sms
+      {:error, message} ->
+        message
     end
   end
   
