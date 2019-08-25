@@ -84,4 +84,4 @@ make start logs
 
 ## Los ```methods``` son las formas en las que quieres que hermes te envie las notificaciones
 
-### Revisa tus  SMSs y tu corre (tal vez este en spam por ser una prueba)
+### Revisa tus  SMSs y tu correo (tal vez este en spam por ser una prueba)
