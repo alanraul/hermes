@@ -16,6 +16,7 @@ services:
       - PHX_SECRET_KEY_BASE=${PHX_SECRET_KEY_BASE}
       - PG_KOLOMBIA_URL=ecto://postgres:postgres@postgres/kolombia_${ENV:-dev}
       - SENDGRID_APIKEY=${SENDGRID_APIKEY}
+      - SENDGRID_TRASNACTION_ID=${SENDGRID_TRASNACTION_ID}
     working_dir: /app/src
     command: mix phx.server
 
